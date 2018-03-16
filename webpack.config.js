@@ -1,14 +1,22 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: "./src/js/App.js",
-  output: {
-    filename: "out.js"
-  },
+  output: { filename: "out.js" },
   devServer: {
-    inline: true,
     contentBase: './',
-    port: 8080
+    port: 8085,
+    inline: true,
+    hot: true
   },
+  plugins: [
+
+    new webpack.NamedModulesPlugin(),
+     new webpack.HotModuleReplacementPlugin()
+  ],
+  mode: "development",
   watch: true,
+
   module: {
     rules: [{
       test: /\.scss$/,
