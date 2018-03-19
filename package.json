@@ -2,11 +2,10 @@
   "name": "10books-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "node_modules/.bin/webpack",
-    "server": "node_modules/.bin/webpack-dev-server"
+    "start": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -18,18 +17,8 @@
     "url": "https://github.com/majkamajka/10books-frontend/issues"
   },
   "homepage": "https://github.com/majkamajka/10books-frontend#readme",
+  "keywords": [],
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.1"
-  },
-  "dependencies": {
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "babel-loader": "^8.0.0-beta.2"
+    "node-sass": "^4.7.2"
   }
 }

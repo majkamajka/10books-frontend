@@ -11,34 +11,40 @@
   <div class="wrapper">
     <div class="container">
       <header class="header">
-        <img class="header__logo" src="" alt="10Clouds" />
+       <img class="header__logo" src="./src/assets/logo-10c.svg" alt="10Clouds" />
         <nav class="header__navigation">
           <ul class="header__menu">
             <li class="header__menu-item">Library</li>
             <li class="header__menu-item">Orders</li>
           </ul>
         </nav>
-        <div class="header__login">
-          <ul class="header__login-items">
-            <li class="header__login-item"><img src="" alt="user-photo" /></li>
-            <li class="header__login-item">John Smith</li>
-            <li class="header__login-item"><img src="" alt="log-out" /></li>
+        <div class="header-login">
+          <ul class="header-login__items">
+            <li class="header-login__item">
+              <img class="header-login__avatar" src="./src/assets/unicat.png" alt="user-photo" />
+            </li>
+            <li class="header-login__item header-login__username">Uni Cat</li>
+            <li class="header-login__item">
+              <img src="./src/assets/logout.svg" alt="log-out" />
+            </li>
           </ul>
         </div>
       </header>
     </div>
     
     <div class="container">
-      <form class="search">
-        <input type="text" >
-        <button>Search</button>
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-      </form>
+      <div class="search">
+        <form class="search__form">
+          <input class="search__input" type="text" >
+          <button>Search</button>
+          <select class="search__select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </form>
+      </div>
     </div>  
 
   <!-- flexbox grid? -->
@@ -86,6 +92,6 @@
   </div>
 
 
-<script src="./dist/out.js"></script>
+<script src="./src/js/index.js"></script>
 </body>
 </html>

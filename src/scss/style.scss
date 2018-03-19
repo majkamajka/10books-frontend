@@ -42,9 +42,12 @@ table {
 	border-spacing: 0;
 }
 
+// TODO: think about color variables names :/
+
 $background: #f3f3f7;
-$header: #fff;
-$category: #86899e;
+$white: #fff;
+$gray: #86899e;
+$accent: #7142eb;
 
 body {
   background-color: $background;
@@ -59,16 +62,20 @@ body {
 
 .header {
   width: 100%;
-  background-color: $header;
+  background-color: $white;
   display: flex;
-  border: 1px dotted blue;
+  height: 110px;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 2px 69px 0 rgba(13, 13, 30, 0.04);
 
   &__logo {
-    flex-grow: 1;
+
   }
 
   &__navigation {
-    flex-grow: 4;
+
   }
 
   &__menu {
@@ -77,22 +84,37 @@ body {
 
   &__menu-item {
     display: inline-block;
+    margin-left: 60px;
+    &:first-of-type {
+      color: $accent;
+    }
   }
+}
 
-  &__login {
-    flex-grow: 2;
-  }
+.header-login {
+  flex-grow: 2;
 
-  &__login-items {
+  &__items {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 
-  &__login-item {
+  &__item {
     display: inline-block;
   }
 
+  &__avatar {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 15px 18px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+  }
 
+  &__username {
+    color: $gray;
+    padding: 0 30px;
+  }
 }
 
 .search {
@@ -100,14 +122,35 @@ body {
   width: auto;
   display: flex;
   justify-content: center;
-  border: 1px dotted orange;
+  border: 1px dotted blue;
+  height: 200px;
+
+  &__form {
+    margin-top: 80px;
+    height: 70px;
+  }
+
+  &__input {
+    height: 100%;
+    width: 675px;
+    border: none;
+    box-shadow: 4px 57px 67px 0 rgba(75, 82, 113, 0.09);
+  }
+
+  &__select {
+    height: 100%;
+    border: none;
+    background: $white;
+    border-bottom-left-radius: 0 !important;
+
+  }
 }
 
 .book-list {
   border: 1px dotted magenta;
 
   &__header {
-    color: $category;
+    color: $gray;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
