@@ -1,5 +1,6 @@
 @import './reset.scss';
 @import './grid.scss';
+@import './palette.scss';
 
 @mixin categoryIcon($size, $color, $categoryAbbr) {
   background-color: lighten($color, 35%);
@@ -13,28 +14,45 @@
   }
 }
 
+$categoryIconSize: 36px;
+
 * {
   box-sizing: border-box;
 }
 
-$background: #f3f3f7;
-$white: #fff;
-$gray: #86899e;
-$accent: #7142eb;
-$text: #3d3b48;
-$accentLight: #f4f0fe;
-$design: #3c79e4;
-$programming: #7142eb;
-$business: #1ecfae;
-$recruitment: #eb4288;
-$web: #eb42bc;
-$categoryIconSize: 36px;
-
+a {
+  text-decoration: none;
+  
+  &:link,
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $text;
+  }
+}
 
 body {
   background-color: $background;
   font-family: 'Montserrat', sans-serif;
   color: $text;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.grid-container {
+  &--list {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  &--categories {
+    width: 900px;
+  }
+  
 }
 
 .container {
@@ -69,7 +87,8 @@ body {
   &__menu-item {
     display: inline-block;
     margin-left: 60px;
-    &:first-of-type {
+
+    &:hover {
       color: $accent;
     }
   }
