@@ -1,58 +1,57 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@import './reset.scss';
+@import './grid.scss';
+
+@mixin categoryIcon($size, $color, $categoryAbbr) {
+  background-color: lighten($color, 35%);
+  color: $color;
+  height: $size;
+  min-width: $size;
+  width: $size;
+
+  &::after {
+    content: $categoryAbbr;
+  }
 }
 
-// TODO: think about color variables names :/
+* {
+  box-sizing: border-box;
+}
 
 $background: #f3f3f7;
 $white: #fff;
 $gray: #86899e;
 $accent: #7142eb;
+$text: #3d3b48;
+$accentLight: #f4f0fe;
+$design: #3c79e4;
+$programming: #7142eb;
+$business: #1ecfae;
+$recruitment: #eb4288;
+$web: #eb42bc;
+$categoryIconSize: 36px;
+
 
 body {
   background-color: $background;
   font-family: 'Montserrat', sans-serif;
+  color: $text;
 }
+
+// .arrow-up {
+//   width: 0; 
+//   height: 0; 
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   border-bottom: 5px solid black;
+// }
+
+// .arrow-down {
+//   width: 0; 
+//   height: 0; 
+//   border-left: 20px solid transparent;
+//   border-right: 20px solid transparent;
+//   border-top: 20px solid #f00;
+// }
 
 .container {
   // media queries 
@@ -69,6 +68,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   box-shadow: 0 2px 69px 0 rgba(13, 13, 30, 0.04);
+  padding: 0 40px;
 
   &__logo {
 
@@ -112,7 +112,6 @@ body {
   }
 
   &__username {
-    color: $gray;
     padding: 0 30px;
   }
 }
@@ -122,8 +121,8 @@ body {
   width: auto;
   display: flex;
   justify-content: center;
-  border: 1px dotted blue;
   height: 200px;
+
 
   &__form {
     margin-top: 80px;
@@ -135,24 +134,148 @@ body {
     width: 675px;
     border: none;
     box-shadow: 4px 57px 67px 0 rgba(75, 82, 113, 0.09);
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding-left: 30px;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  // TODO: center vertically
+
+  &__loupe-wrapper {
+    display: inline-block;
+    margin-left: -40px;
+  }
+
+  &__loupe {
+    height: 28px;
+    width: 28px;
   }
 
   &__select {
-    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 30px;
+    height: calc(100% + 2px);
     border: none;
     background: $white;
-    border-bottom-left-radius: 0 !important;
-
+    font-size: 17px;
+    color: $gray;
+    font-weight: bold;
+    box-shadow: 4px 57px 67px 0 rgba(75, 82, 113, 0.09);
+    margin-left: 40px;
   }
 }
 
-.book-list {
-  border: 1px dotted magenta;
+.booklist {
+  &__row-heading {
+  }
 
-  &__header {
+  &__heading {
     color: $gray;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__row-data {
+    background-color: $white;
+  }
+
+  &__column-title {
+
+  }
+
+  &__column-author {
+    font-weight: bold;
+  }
+
+  &__column-rating {
+    font-weight: bold;
+  }
+
+  &__category-icon {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+
+    &--design {
+      @include categoryIcon($categoryIconSize, $design, 'D');
+    }
+
+    &--programming {
+      @include categoryIcon($categoryIconSize, $programming, 'P');
+    }
+
+    &--business {
+      @include categoryIcon($categoryIconSize, $business, 'B');
+    }
+
+    &--recruitment {
+      @include categoryIcon($categoryIconSize, $recruitment, 'R');
+    }
+
+    &--web {
+      @include categoryIcon($categoryIconSize, $web, 'W');
+    }
+  }
+
+  &__column-category {
+    color: $gray;
+    margin-left: 20px;
+  }
+
+  &__column-status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+  }
+
+  &__status-button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+
+    &--take {
+      background-color: $accentLight;
+      color: $accent;
+    }
+
+    &--return {
+      background-image: linear-gradient(to right, #865ee8, #6536e2);
+      color: $accentLight;
+    }
+  }
+
+  &__avatar {
+    @extend .header-login__avatar;
+  }
+
+  &__status-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 15px;
+  }
+
+  &__status-detail-time {
+    font-size: 16px;
+    color: $gray;
+  }
+
+  &__status-detail-name {
+    font-weight: bold;
   }
 }

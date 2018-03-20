@@ -5,7 +5,7 @@
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <title>10Books</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
@@ -35,60 +35,176 @@
     <div class="container">
       <div class="search">
         <form class="search__form">
-          <input class="search__input" type="text" >
-          <button>Search</button>
+          <input class="search__input" type="text" placeholder="Type book name or author">
+          <div class="search__loupe-wrapper" role="button">
+            <img class="search__loupe" src="./src/assets/loupe.svg" alt="search" />
+          </div>
           <select class="search__select">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="1">Design & UX</option>
+            <option value="2">Business & Management</option>
+            <option value="3">Programming</option>
+            <option value="4">Web development</option>
+            <option value="4">Recruitment</option>
           </select>
         </form>
       </div>
     </div>  
 
-  <!-- flexbox grid? -->
     <div class="container">
-      <div class="book-list">
-        <div class="book-list__header">
-          <div class="">Title</div>
-          <div class="">Author</div>
-          <div class="">Rating</div>
-          <div class="">Category</div>
-          <div class="">Status</div>
-        </div>
-        <div class="book-list__elements">
-          <div class="book-list__row">
-            <div class="">Hiss and stare at nothing then run suddenly away</div>
-            <div class="">Kitty kitty meowing</div>
-            <div class="">4.5</div>
-            <div class="">Meow loudly</div>
-            <div class="">Hiss</div>
+      <div class="grid-container">
+        <div class="row booklist__row-heading">
+          <div class="col-4">
+            <span class="booklist__heading">Title</span>
           </div>
-          <div class="book-list__row">
-            <div class="">Hiss and stare at nothing then run suddenly away</div>
-            <div class="">Kitty kitty meowing</div>
-            <div class="">4.5</div>
-            <div class="">Meow loudly</div>
-            <div class="">Hiss</div>
+          <div class="col-2">
+            <span class="booklist__heading">Author</span>
           </div>
-          <div class="book-list__row">
-            <div class="">Hiss and stare at nothing then run suddenly away</div>
-            <div class="">Kitty kitty meowing</div>
-            <div class="">4.5</div>
-            <div class="">Meow loudly</div>
-            <div class="">Hiss</div>
+          <div class="col-1">
+            <span class="booklist__heading">Rating</span>
           </div>
-          <div class="book-list__row">
-            <div class="">Hiss and stare at nothing then run suddenly away</div>
-            <div class="">Kitty kitty meowing</div>
-            <div class="">4.5</div>
-            <div class="">Meow loudly</div>
-            <div class="">Hiss</div>
+          <div class="col-2">
+            <span class="booklist__heading">Category</span>
+          </div>
+          <div class="col-3">
+            <span class="booklist__heading">Status</span>
           </div>
         </div>
-      </div>  
-    </div>  
+
+<!-- available -->
+
+        <div class="row booklist__row-data">
+          <div class="col-4">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__column-rating">4.5</span>
+          </div>
+          <div class="col-2">
+            <div class="booklist__category-icon booklist__category-icon--design"></div>
+            <span class="booklist__column-category">Design</span>
+          </div>
+          <div class="col-3">
+            <div class="booklist__column-status">
+              <button class="booklist__status-button booklist__status-button--take">
+                Take book
+              </button>
+            </div>
+          </div>
+        </div>
+
+<!-- owned -->
+
+        <div class="row booklist__row-data taken">
+          <div class="col-4">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__column-rating">4.5</span>
+          </div>
+          <div class="col-2">
+            <div class="booklist__category-icon booklist__category-icon--programming"></div>
+            <span class="booklist__column-category">Programming</span>
+          </div>
+          <div class="col-3">
+            <div class="booklist__column-status">
+              <div class="booklist__column-status">
+                <button class="booklist__status-button booklist__status-button--return">
+                  Return book
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- taken -->
+
+        <div class="row booklist__row-data available">
+          <div class="col-4">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__column-rating">4.5</span>
+          </div>
+          <div class="col-2">
+            <div class="booklist__category-icon booklist__category-icon--business"></div>
+            <span class="booklist__column-category">Business & Management</span>
+          </div>
+          <div class="col-3">
+            <div class="booklist__column-status">
+              <img src="./src/assets/unicat.png" alt="avatar" class="booklist__avatar">
+              <div class="booklist__status-details-wrapper">
+                <span class="booklist__status-detail-time">Taken 20 days ago</span>
+                <span class="booklist__status-detail-name">Tomek Nowak</span>
+              </div>
+              <img src="./src/assets/bell--inactive.svg" alt="avatar" class="bell-inactive"  class="booklist__bell-icon">
+            </div>
+          </div>
+        </div>
+
+<!-- taken notify -->
+
+        <div class="row booklist__row-data owned">
+          <div class="col-4">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__column-rating">4.5</span>
+          </div>
+          <div class="col-2">
+            <div class="booklist__category-icon booklist__category-icon--recruitment"></div>
+            <span class="booklist__column-category">Recruitment</span>
+          </div>
+          <div class="col-3">
+            <div class="booklist__column-status">
+              <img src="./src/assets/unicat.png" alt="avatar" class="booklist__avatar">
+              <div class="booklist__status-details-wrapper">
+                <span class="booklist__status-detail-time">Taken 20 days ago</span>
+                <span class="booklist__status-detail-name">Tomek Nowak</span>
+              </div>
+              <img src="./src/assets/bell.svg" alt="avatar" class="bell"  class="booklist__bell-icon">
+            </div>
+          </div>
+        </div>
+
+        <!-- available -->
+
+        <div class="row booklist__row-data">
+          <div class="col-4">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__column-rating">4.5</span>
+          </div>
+          <div class="col-2">
+            <div class="booklist__category-icon booklist__category-icon--web"></div>
+            <span class="booklist__column-category">Web</span>
+          </div>
+          <div class="col-3">
+            <div class="booklist__column-status">
+              <button class="booklist__status-button booklist__status-button--take">
+                Take book
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> 
   </div>
 
 

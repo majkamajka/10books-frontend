@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Stroke 4342 + Stroke 4343</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="10books" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Library---dropdown-category---ADMIN" transform="translate(-1045.000000, -217.000000)" stroke="#86899E" stroke-width="2.25">
+            <g id="Group-37" transform="translate(435.000000, 195.000000)">
+                <g id="Search">
+                    <g id="Group-8">
+                        <g id="Stroke-4342-+-Stroke-4343" transform="translate(612.000000, 24.000000)">
+                            <path d="M17.2307692,8.61538462 C17.2307692,13.3732308 13.3732308,17.2307692 8.61538462,17.2307692 C3.85753846,17.2307692 0,13.3732308 0,8.61538462 C0,3.85753846 3.85753846,0 8.61538462,0 C13.3732308,0 17.2307692,3.85753846 17.2307692,8.61538462 L17.2307692,8.61538462 Z" id="Stroke-4342"></path>
+                            <path d="M14.7296154,14.6846538 L20.2679142,20.247904" id="Stroke-4343" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+.grid-container {
+  width: 100%;
+  //width: 1000px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  .row {
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 0 40px 0 20px;
+
+    &:before,
+    &:after {
+      content : "";
+      display : table;
+      clear: both;
+    }
+
+    [class*='col-'] {
+      float: left;
+      min-height: 85px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    $colsNumber: 12;
+
+    @for $i from 1 through $colsNumber {
+      .col-#{$i}{
+        width: 100% / $colsNumber * $i;
+      }
+    }
+  }
+}
