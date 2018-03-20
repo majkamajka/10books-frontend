@@ -21,5 +21,8 @@
   "keywords": [],
   "devDependencies": {
     "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "parcel-bundler": "1.6.2"
   }
 }
