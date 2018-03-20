@@ -37,22 +37,6 @@ body {
   color: $text;
 }
 
-// .arrow-up {
-//   width: 0; 
-//   height: 0; 
-//   border-left: 5px solid transparent;
-//   border-right: 5px solid transparent;
-//   border-bottom: 5px solid black;
-// }
-
-// .arrow-down {
-//   width: 0; 
-//   height: 0; 
-//   border-left: 20px solid transparent;
-//   border-right: 20px solid transparent;
-//   border-top: 20px solid #f00;
-// }
-
 .container {
   // media queries 
   margin: 0 auto;
@@ -140,15 +124,14 @@ body {
     padding-left: 30px;
 
     &::placeholder {
-      color: $gray;
+      color: rgba($gray, .7);
     }
   }
 
   // TODO: center vertically
-
   &__loupe-wrapper {
     display: inline-block;
-    margin-left: -40px;
+    margin-left: -60px;
   }
 
   &__loupe {
@@ -165,10 +148,10 @@ body {
     border: none;
     background: $white;
     font-size: 17px;
-    color: $gray;
+    color: rgba($gray, .7);
     font-weight: bold;
     box-shadow: 4px 57px 67px 0 rgba(75, 82, 113, 0.09);
-    margin-left: 40px;
+    margin-left: 60px;
   }
 }
 
@@ -185,6 +168,16 @@ body {
 
   &__row-data {
     background-color: $white;
+
+    &--taken {
+      border-left: 6px solid $accent;
+    }
+
+    &:hover {
+      box-shadow: 5px 40px 40px 10px rgba(75, 82, 113, 0.10);
+      position: relative;
+      z-index: 2;
+    }
   }
 
   &__column-title {
