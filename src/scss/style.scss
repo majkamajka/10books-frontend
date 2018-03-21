@@ -52,13 +52,42 @@ h1 {
   &--categories {
     width: 900px;
   }
-  
 }
 
 .container {
   // media queries 
   margin: 0 auto;
   width: 100%;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+
+  &--bright {
+    color: $accent;
+    background-color: $accentLight;
+  }
+
+  &--dark {
+    color: $accentLight;
+    background-image: linear-gradient(to right, #865ee8, #6536e2);
+  }
+
+  &--delete {
+    color: $warning;
+    background-color: lighten($warning, 35%);
+  }
+
+  &--narrow {
+    width: auto;
+    padding: 0 50px;
+    height: 56px;
+  }
 }
 
 .header {
@@ -125,7 +154,6 @@ h1 {
   display: flex;
   justify-content: center;
   height: 200px;
-
 
   &__form {
     margin-top: 80px;
@@ -252,25 +280,6 @@ h1 {
     line-height: 30px;
   }
 
-  &__status-button {
-    width: 100%;
-    height: 50px;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-
-    &--take {
-      background-color: $accentLight;
-      color: $accent;
-    }
-
-    &--return {
-      background-image: linear-gradient(to right, #865ee8, #6536e2);
-      color: $accentLight;
-    }
-  }
-
   &__avatar {
     @extend .header-login__avatar;
   }
@@ -290,4 +299,10 @@ h1 {
   &__status-detail-name {
     font-weight: bold;
   }
+
+  &__column-show {
+    color: $accent;
+  }
 }
+
+
