@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <title>10Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <header class="header">
+       <img class="header__logo" src="./assets/logo-10c.svg" alt="10Clouds" />
+        <nav class="header__navigation">
+          <ul class="header__menu">
+            <li class="header__menu-item">Library</li>
+            <li class="header__menu-item">Orders</li>
+            <li class="header__menu-item"><a href="./categories.html">Categories</a></li>
+          </ul>
+        </nav>
+        <div class="header-login">
+          <ul class="header-login__items">
+            <li class="header-login__item">
+              <img class="header-login__avatar" src="./assets/unicat.png" alt="user-photo" />
+            </li>
+            <li class="header-login__item header-login__username">Uni Cat</li>
+            <li class="header-login__item">
+              <img src="./assets/logout.svg" alt="log-out" />
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    
+    <div class="container">
+      <div class="search">
+        <form class="search__form">
+          <input class="search__input" type="text" placeholder="Type book name or author">
+          <div class="search__loupe-wrapper" role="button">
+            <img class="search__loupe" src="./assets/loupe.svg" alt="search" />
+          </div>
+          <select class="search__select">
+            <option value="1">Design & UX</option>
+            <option value="2">Business & Management</option>
+            <option value="3">Programming</option>
+            <option value="4">Web development</option>
+            <option value="4">Recruitment</option>
+          </select>
+          <div class="add-button-wrapper">
+            <a href="./orders-add.html">dssdsd
+            </a>
+            <button class="button button--dark">+ Add</button>
+          </div>
+        </form>
+      </div>
+    </div>  
+
+    <div class="container">
+      <div class="grid-container grid-container--list">
+        <div class="row booklist__row-heading">
+          <div class="col-3">
+            <span class="booklist__heading">Title</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__heading">Author</span>
+          </div>
+          <div class="col-1">
+            <span class="booklist__heading">Category</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__heading">Requested by</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__heading">Votes</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__heading">Status</span>
+          </div>
+        </div>
+
+        <div class="row booklist__row-data owned">
+          <div class="col-3">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <div class="booklist__category-icon booklist__category-icon--recruitment"></div>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-name">Tomek Nowak</span>
+          </div>
+          <div class="col-2">
+              <img src="./assets/loupe.svg" alt="vote-up" />
+              <span class="vote vote--up">5</span>
+              <span class="vote vote--down">2</span>
+              <img src="./assets/loupe.svg" alt="vote-down" />
+          </div>
+          <div class="col-2">
+            <button class="button button--bright">In Library</button>
+          </div>
+        </div>
+
+        <div class="row booklist__row-data owned">
+          <div class="col-3">
+            <span class="booklist__column-title">Hiss and stare at nothing then run suddenly away</span>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-author">Meow Loudly</span>
+          </div>
+          <div class="col-1">
+            <div class="booklist__category-icon booklist__category-icon--os"></div>
+          </div>
+          <div class="col-2">
+            <span class="booklist__column-name">Tomek Nowak</span>
+          </div>
+          <div class="col-2">
+              <img src="./assets/loupe.svg" alt="vote-up" />
+              <span class="vote vote--up">5</span>
+              <span class="vote vote--down">2</span>
+              <img src="./assets/loupe.svg" alt="vote-down" />
+          </div>
+          <div class="col-2">
+            <button class="button button--bright">Status</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+
+<script src="./js/index.js"></script>
+</body>
+</html>
