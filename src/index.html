@@ -40,13 +40,15 @@
           <div class="search__loupe-wrapper" role="button">
             <img class="search__loupe" src="./assets/loupe.svg" alt="search" />
           </div>
-          <select class="search__select">
-              <option value="design">Design & UX</option>
-              <option value="business">Business & Management</option>
-              <option value="programming">Programming</option>
-              <option value="web">Web development</option>
-              <option value="recruitment">Recruitment</option>
-          </select>
+
+            <select class="search__select">
+              <option value="" disabled selected>Category</option>
+              <option value="1">Design & UX</option>
+              <option value="2">Business & Management</option>
+              <option value="3">Programming</option>
+              <option value="4">Web development</option>
+              <option value="5">Recruitment</option>
+            </select>
         </form>
       </div>
     </div>  
@@ -55,7 +57,7 @@
       <div class="grid-container grid-container--list">
         <div class="row booklist__row-heading">
           <div class="col-4">
-            <span class="booklist__heading">Title</span>
+            <span class="booklist__heading booklist__heading--sort">Title</span>
           </div>
           <div class="col-2">
             <span class="booklist__heading">Author</span>
